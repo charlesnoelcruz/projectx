@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.20.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'pry-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
