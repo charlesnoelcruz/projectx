@@ -1,0 +1,15 @@
+current directory: /Users/charles/Desktop/projectx/path/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/charles/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20170602-56573-15ibjxm.rb extconf.rb
+creating Makefile
+
+current directory: /Users/charles/Desktop/projectx/path/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/charles/Desktop/projectx/path/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/charles/Desktop/projectx/path/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 websocket_mask.bundle ./.gem.20170602-56573-osxlmp
