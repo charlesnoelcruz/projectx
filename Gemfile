@@ -31,6 +31,10 @@ gem 'pg', '~> 0.20.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'pry-rails'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'autoprefixer-rails'
+gem 'jquery-rails'
+gem 'rails_admin'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
