@@ -1,5 +1,14 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  def create
+    if User.find_by email: params[:user][:email]
+      super
+    else
+      flash[:alert] = "user must be invited to sign up"
+      redirect_to root_path
+    end
+  end
+
   private
 
   def sign_up_params
