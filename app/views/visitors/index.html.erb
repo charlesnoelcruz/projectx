@@ -3,7 +3,12 @@
   <% if user_signed_in? %>
     <% if current_user.super_admin? %>
       <h3>Hi <%= current_user.name %></h3>
-      <p><%= link_to 'Create a post', posts_path %></p>
+      <p><%= link_to 'Create a post', posts_path, class: 'btn btn-success btn-large' %>
+        <%= link_to 'Invite a member', new_user_invitation_path, class: 'btn btn-success btn-large' %>  
+      </p>
+    <% elsif current_user.admin? %>
+      <h3>You're signed up!</h3>
+      <%= link_to 'Invite a member', new_user_invitation_path, class: 'btn btn-success btn-large' %>  
     <% else %>
       <h3>You're signed up!</h3>
       <%= link_to 'My Account', current_user, class: 'btn btn-success btn-large' %>

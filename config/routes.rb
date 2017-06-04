@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/super_admin', as: 'rails_admin'
   get 'super_admin' => "dashboard#index", :as => :dashboard
   resources :posts
-  devise_for :users, controllers: { registrations: "registrations", invitations: "users/invitations" }
+  devise_for :users, controllers: { registrations: "registrations"}
   resources :users
-  get 'admin' => 'admin#index'
+  get 'admin' => 'devise/invitations#new'
 end
