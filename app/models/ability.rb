@@ -2,11 +2,23 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    if user.super_admin?
+        can :manage, Post
+    end
 
-    # if user.super_admin?
-    #     can :manage, :all
-    # else
-    #     can :manage, :user
+    # if user.admin? || user.super_admin?
+    #     can :manage, Admin
+    # end
+
+
+    # if user.role? :member
+    #   can :manage, Post
+    # end
+    # if user.role? :admin
+    #   can :manage, Admin
+    # end
+    # if user.role? :superadmin
+    #   can :manage, :all
     # end
     # Define abilities for the passed in user here. For example:
     #

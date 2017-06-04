@@ -20,5 +20,4 @@ if User.count == 0
     member.save!
     puts "Member account has been created"
 
-
 end

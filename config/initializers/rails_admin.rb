@@ -1,10 +1,10 @@
 RailsAdmin.config do |config|
-  config.authorize_with do
-    unless current_user.super_admin == true
-      redirect_to main_app.root_path 
-      flash[:error] = "You are not a super admin"
-    end
-  end
+  # config.authorize_with do
+  #   unless current_user.super_admin?
+  #     redirect_to main_app.root_path 
+  #     flash[:error] = "You are not a super admin"
+  #   end
+  # end
 
   ### Popular gems integration
 

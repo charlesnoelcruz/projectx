@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authorize_current_user!
+  load_and_authorize_resource
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
@@ -77,5 +79,12 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :content)
+    end
+
+    def authorize_current_user!
+      unless can? :manage, Post
+        flash[:alert] = "User has no access"
+        redirect_to root_path
+      end
     end
 end
