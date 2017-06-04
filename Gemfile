@@ -36,7 +36,7 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'rails_admin'
 gem 'cancancan', '~> 1.10'
-# gem 'devise_invitable', '~> 1.7.0'
+gem 'devise_invitable', '~> 1.7.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
