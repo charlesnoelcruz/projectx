@@ -35,6 +35,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'autoprefixer-rails'
 gem 'jquery-rails'
 gem 'rails_admin'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

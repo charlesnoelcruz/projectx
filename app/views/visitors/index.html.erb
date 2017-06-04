@@ -1,0 +1,15 @@
+<div class='text-center'>
+  <h3>Welcome</h3>
+  <% if user_signed_in? %>
+    <% if current_user.super_admin? %>
+      <h3>Hi <%= current_user.name %></h3>
+      <p><%= link_to 'Create a post', posts_path %></p>
+    <% else %>
+      <h3>You're signed up!</h3>
+      <%= link_to 'My Account', current_user, class: 'btn btn-success btn-large' %>
+    <% end %>
+  <% else %>
+    <h3>Please register</h3>
+    <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-primary btn-large' %>
+  <% end %>
+</div>

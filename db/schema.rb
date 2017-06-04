@@ -21,7 +21,8 @@ ActiveRecord::Schema.define(version: 20170602050401) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.boolean "admin"
+    t.integer "role"
+    t.boolean "super_admin", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

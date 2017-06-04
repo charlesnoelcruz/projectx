@@ -1,6 +1,9 @@
 RailsAdmin.config do |config|
   config.authorize_with do
-    redirect_to main_app.root_path unless current_user.admin == true
+    unless current_user.super_admin == true
+      redirect_to main_app.root_path 
+      flash[:error] = "You are not a super admin"
+    end
   end
 
   ### Popular gems integration
